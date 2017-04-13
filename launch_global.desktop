@@ -2,8 +2,8 @@
 Name=UNIBO launch
 Comment=Global launch for ROS nodes of the rover
 NoDisplay=true
-Exec=/home/sherpa/SherpaHighLevel/scripts/launch_global.sh
-Path=/home/sherpa/SherpaHighLevel/scripts/
+Exec=/home/sherpa/AutoStart/scripts/launch_global.sh
+Path=/home/sherpa/AutoStart/scripts/
 Icon=preferences-desktop-remote-desktop
 Terminal=false
 Type=Application

@@ -1,0 +1,29 @@
+tput reset
+export NC='\033[0m'
+export RED='\033[1;31m'
+export GRN='\033[1;32m'
+export YLW='\033[1;33m'
+export BLU='\033[1;34m'
+
+echo -e "wellcome to $LRED Hardware Tests $NC"
+
+#INFO
+echo -e "\n$YLW case1: $BLU Test the MPC pathsolver with Action $NC"
+#ALIAS
+alias case1='export CASE=CASE1;screen -c ${HOME}/catkin_ws/src/rover_actions/screen/test_DriveToOApath -S CASE1'
+#INFO
+echo -e "\n$YLW case2: $BLU Test the DriveTOOA Action base on Astar (Using MoveBase) $NC"
+#ALIAS
+alias case2='export CASE=CASE2; screen -c ${HOME}/catkin_ws/src/rover_actions/screen/test_DriveToOA -S CASE2'
+echo -e "\n\n\n"
+
+rostopic echo /RoverPowerInfo -w 5 -n 1 |grep Battery_Voltage
+
+echo -e          "  ------------------------------------------"
+echo -e          "           $YLW GENERAL INFORMATION $NC         "
+echo -e          "  ------------------------------------------"
+echo -e "* Please Do not Use $RED killall screen $NC \n  instead use $GRN quit $NC to kill the current screen session"
+echo -e "* To attach a screen session use $GRN screen -x #name $NC and to detach $GRN screen -d #name $NC"
+echo -e "* To attach to startup screen session use $GRN screen -x startup $NC\n"
+
+alias quit='screen -X -S $CASE quit'

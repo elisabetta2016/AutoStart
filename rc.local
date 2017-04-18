@@ -1,0 +1,16 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+#/home/sherpa/SherpaHighLevel/scripts/launch_global.sh &
+sleep 10
+su - sherpa -c "screen -c /home/sherpa/SherpaHighLevel/scripts/startup -dmS startup"
+exit 0

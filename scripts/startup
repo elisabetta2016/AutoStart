@@ -15,7 +15,7 @@ stuff "sleep 5;source ${HOME}/.bashrc;roslaunch donkey_rover donkey_nav_stack.la
 
 screen 2
 title "IMU"
-stuff "sleep 1;source ${HOME}/.bashrc;roslaunch donkey_rover imu.launch\015"
+stuff "sleep 4;source ${HOME}/.bashrc;roslaunch donkey_rover imu.launch\015"
 
 screen 3
 title "Donkey State"
